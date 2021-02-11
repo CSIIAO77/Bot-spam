@@ -26,10 +26,8 @@ def login():
         done = 1
         while True:
             url_report = 'https://www.instagram.com/users/{}/report/'.format(user_id)
-            datas = {'source_name':'','reason_id':1,'frx_context':''} #spam
-            datas_ = {'source_name':'','reason_id':3,'frx_context':''} #spam2    
+            datas = {'source_name':'','reason_id':1,'frx_context':''} #spam   
             report = r.post(url_report,data=datas)
-            report = r.post(url_report,data=datas_)
             print('done spam {}'.format(done))
             sleep(sle)
             done += 1
